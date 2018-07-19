@@ -13,7 +13,16 @@ Spotify Developer | Web API User Guide
 
 Test App Config:
 
+
+*THESE CREDENTIALS ARE NOT VALID*
+
+Visit https://developer.spotify.com to setup your api credentials
+
 Application Name: spotify_worker
 
-Client ID: 3e02d929c0e543ad85bb421c103059b3
-Client Secret: 1a4376e054e34e62a67f488f75cbe649
+
+Client ID: 99999999999999999999
+
+
+Client Secret: 99999999999999999999
+
