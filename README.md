@@ -16,6 +16,7 @@ Test App Config:
 
 *THESE CREDENTIALS ARE NOT VALID*
 
+Visit https://developer.spotify.com to setup your api credentials
 
 Application Name: spotify_worker
 
@@ -24,3 +25,4 @@ Client ID: 99999999999999999999
 
 
 Client Secret: 99999999999999999999
+
