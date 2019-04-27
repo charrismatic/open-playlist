@@ -1,7 +1,7 @@
 /* UTILITIES */
 
 .hide {
-  display: none; 
+  display: none;
 }
 
 /* MAIN */
@@ -56,27 +56,7 @@ body {
   height: 100%;
 }
 
-#editor {display: none; }
-
-#editor.active{ 
-  display: block;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  width: 30%;
-  min-width: 400px;
-  top: 0;
-}
-
-#render.editor-active {
-  position: absolute;
-  width: 70%;
-  min-width: 400px;
-  right: 0;
-  max-width: calc(100% - 400px);
-}
-
-#other-results {  
+#other-results {
   margin: 2em auto;
 }
 

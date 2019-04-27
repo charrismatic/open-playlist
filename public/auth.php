@@ -1,7 +1,7 @@
 <?php
 
 // SPOTIFY API APPLICATION CREDENTIALS
-$client_id = "--------------------------------";
+$client_id = "3e02d929c0e543ad85bb421c103059b3";
 $client_secret = "";
 
 // THE APPLICATION USER AND SELECTED PLAYIST ID
