@@ -9,8 +9,6 @@ Spotify Web Api Issue Tracker
 Spotify Developer | Web API User Guide 
 
 [developer.spotify.com/web-api/user-guide](https://developer.spotify.com/web-api/user-guide)
-
-
 Test App Config:
 
 
@@ -25,4 +23,3 @@ Client ID: 99999999999999999999
 
 
 Client Secret: 99999999999999999999
-
