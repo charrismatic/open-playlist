@@ -1,11 +1,8 @@
 {
-  "name": "Open-Playlist",
+  "name": "open-playlist",
   "version": "1.0.0",
-  "description": "Playground for Spotify API",
+  "description": "Open public playlist using the spoitfy api",
   "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,32 +13,15 @@
   "author": "Matt Harris",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "commander": "^2.11.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-coffee": "^2.3.4",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-help": "^1.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-parker": "^0.1.4",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-stylestats": "^3.0.1",
-    "gulp-todo": "^5.4.0",
+    "babel-core": "^6.26.3",
+    "commander": "^2.20.0",
     "handlebars": "^4.0.11",
-    "jquery": "^3.2.1",
-    "parker": "0.0.10",
-    "require-dir": "^0.3.2",
-    "run-sequence": "^2.1.0",
-    "spotify-web-api-js": "^0.23.0",
-    "vinyl-paths": "^2.1.0"
+    "jquery": "^3.4.0",
+    "spotify-web-api-js": "^0.23.0"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
   }
 }

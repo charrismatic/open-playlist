@@ -615,7 +615,7 @@ body {
 }
 
 .spot_profile_widget .bt-icon {
-  background-image: url(/open-playlist/assets/Spotify_Icon_White.png);
+  background-image: url('/assets/Spotify_Icon_White.png');
   background-size: contain;
   display: inline-block;
   height: 17px;
