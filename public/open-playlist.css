@@ -1,9 +1,10 @@
 /**
  *  UTILITY CLASSES
- *
- * <span>test</span>
- *
 */
+#playlist-data {
+  flex: 1;
+}
+
 .bg {
   background-size: cover;
   background-repeat: no-repeat;
@@ -501,6 +502,10 @@ body {
   min-width: 50px;
 }
 
+#search-form {
+  position: relative;
+}
+
 .search_form__input {
   display: block;
   border: 0;
@@ -525,7 +530,7 @@ body {
 
 .search_form__submit {
   position: absolute;
-  right: 1.2em;
+  right: 0em;
   color: #fff;
   background-color: #2ebd59;
   font-size: 1em;

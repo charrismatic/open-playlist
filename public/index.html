@@ -7,37 +7,40 @@
   <meta property="og:title" content="Open Playlist" />
   <meta property="og:description" content="Completly Open, Always on, Open Playlist. Add songs for me to listen to while we bring in the New Year." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.ma.ttharr.is/open-playlist" />
-  <meta property="og:image" content="http://www.ma.ttharr.is/open-playlist/assets/high-volume.png" />
+  <meta property="og:url" content="https://ma.ttharr.is/open-playlist" />
+  <meta property="og:image" content="https://ma.ttharr.is/open-playlist/assets/high-volume.png" />
   <meta property="fb:app_id" content="713958795473441" />
-  <link rel="stylesheet" href="/lib/bootstrap.min.css">
-  <link rel="stylesheet" href="/lib/cached.css" >
-  <link rel="stylesheet" href="/styles.css" >
-  <link rel="stylesheet" href="/open-playlist.css" >
-  <script src="/lib/jquery.min.js"></script>
-  <script src="/lib/handlebars.js"></script>
-  <script src="/open-playlist.js"></script>
+  <link rel="stylesheet" href="https://ma.ttharr.is/open-playlist/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ma.ttharr.is/open-playlist/lib/cached.css" >
+  <link rel="stylesheet" href="https://ma.ttharr.is/open-playlist/styles.css" >
+  <link rel="stylesheet" href="https://ma.ttharr.is/open-playlist/open-playlist.css" >
+  <script src="https://ma.ttharr.is/open-playlist/lib/jquery.min.js"></script>
+  <script src="https://ma.ttharr.is/open-playlist/lib/handlebars.js"></script>
+  <script src="./open-playlist.js"></script>
 </head>
 <body>
+<div style="max-width: 1000px">
 <section>
     <h1>Open Playlist <span class="small">Open, Always on, Social Playlist. Add songs for me to listen to.</span></h1>
     <div class="social">
       <div class="spot_profile_widget detail ">
         <a href="https://open.spotify.com/user/mjharris2407" target="_blank">
-          <div class="img" style="background-image:url('/assets/mattharris_profile.jpg')"></div>
+          <div class="img" style="background-image:url('https://ma.ttharr.is/open-playlist/assets/mattharris_profile.jpg')"></div>
         </a>
         <div class="bd">
           <h1>
             <a href="https://open.spotify.com/user/mjharris2407" target="_blank">Matt Harris</a>
           </h1>
-          <button title="Follow on Spotify">
-            <span class="bt-icon"></span>
-            <span class="bt-text">Follow</span>
-          </button>
-          <div class="count" data-followers="19">
-            <div class="count-num front">19</div>
-            <div class="count-num back">+1</div>
-          </div>
+          <a href="https://open.spotify.com/user/mjharris2407" target="_blank">
+            <button title="Follow on Spotify">
+              <span class="bt-icon"></span>
+              <span class="bt-text">Follow</span>
+            </button>
+            <div class="count" data-followers="31">
+              <div class="count-num front">31</div>
+              <div class="count-num back">+1</div>
+            </div>
+           </a>
         </div>
       </div>
     </div>
@@ -58,10 +61,12 @@
 <section class="playlist-container flex-row">
   <div class="live-playlist" style="padding-right: 2em;">
     <h3>Listen Now</h3>
-    <iframe src="https://open.spotify.com/embed/user/mjharris2407/playlist/5J5woWIVKETFIugsyxexZI" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/6rapkWMvASjbPeEVfiT5IS" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
   <div id="playlist-data"></div>
 </section>
+
+</div>
 
 
 <!-- PLAYLIST TEMPLATE -->
@@ -72,9 +77,10 @@
   <div class="playlist__meta">
     <span class="playlist__followers">Followers: {{followers}}</span>
     <!-- https://developer.spotify.com/web-api/follow-playlist/ -->
-    <button id="follow-playlist" data-playlist-id="{{id}}" class="spot_button">Follow Playlist</button>
-    <p><a href="{{url}}">Spotify Link</a></p>
-    <p><a href="spotify:user:{{owner.id}}:playlist:{{id}}">Spotify URI</a></p>
+    <a href="{{url}}" target="_blank">
+      <button id="follow-playlist" data-playlist-id="{{id}}" class="spot_button">Follow Playlist</button>
+    </a>
+    <!--<p><a href="spotify:user:{{owner.id}}:playlist:{{id}}">Spotify URI</a></p>-->
   </div>
   <div class="playlist__image" style="background-image:url({{images.0.url}})"></div>
     <h3>Track List</h3>
@@ -169,11 +175,9 @@ var album_tracks_placeholder = document.getElementById('other-results'),
   album_tracks_template = Handlebars.compile(album_tracks_template_source);
 
 
-const open_playlist_id = "5J5woWIVKETFIugsyxexZI";
-const open_playlist_userid = "mjharris2407";
-
-// var token = 'BQB4uI0-rrh0l_5lVdKfLFe8xCM-WDlFQnSAhWOhB2DcNXx3HTVy1-HfcSBlXTWCvBJLTUMRpfQOG0qbMss';
-var token = null;
+const open_playlist_id = "6rapkWMvASjbPeEVfiT5IS"
+const open_playlist_userid = "mjharris2407"
+var token = null
 
 document.getElementById('search-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -190,8 +194,16 @@ $(document).ready(function(){
       playlist_id: open_playlist_id
     }, token );
   }
-});
+})
+</script>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-68048210-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-68048210-2');
 </script>
 </body>
 </html>

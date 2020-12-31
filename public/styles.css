@@ -70,11 +70,15 @@ body {
 
 .playlist__meta {
   display: flex;
-  justify-content: space-around;
   border: 1px solid #252525;
   align-items: center;
   background: #1f1c1c;
   border-radius: 9px;
+}
+
+.playlist__meta .playlist__followers {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .playlist__track_container {

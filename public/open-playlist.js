@@ -1,20 +1,17 @@
 const get_new_access_token = function () {
-  $.ajax({
-    type: "GET",
-    url: '/token',
-    success: function (response) {
-      token = response;
-      get_playlist_data({
-        user_id: open_playlist_userid,
-        playlist_id: open_playlist_id
-      }, token );
-    }
-  });
+  fetch('https://open-playlist-server-4qo61xwux.vercel.app/api/refresh-token')
+  .then(data=>data.json())
+  .then(response=>{
+    token = response.access_token
+    get_playlist_data({
+      user_id: open_playlist_userid,
+      playlist_id: open_playlist_id
+    }, token )
+  })
 }
 
-
-const refresh_acces_token = function () {
-  var endpoint = '/refresh-token';
+const get_access_token = function () {
+  var endpoint = '/token'
   $.ajax({
     type: "GET",
     url: endpoint,
@@ -28,16 +25,7 @@ const refresh_acces_token = function () {
   });
 }
 
-
-/* EXAMPLE
-add_track_to_playlist({
-  user_id: open_playlist_userid,
-  playlist_id: open_playlist_id,
-  uri: "spotify:track:7co0X2b0Gu23WbLsn9CLcQ"
-});
-*/
 const add_track_to_playlist = function (data, token) {
-
   var endpoint = 'https://api.spotify.com/v1/users/' + data.user_id + '/playlists/' + data.playlist_id + '/tracks';
   var query_string = '?uris=' + data.uri + '';
   $.ajax({
